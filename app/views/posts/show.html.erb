@@ -1,34 +1,46 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
+  <div class="header">
+    <h3>
+      <%= @post.name %>
+    </h3>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @post.name %>
-  </p>
+    <h4>
+      <%= @post.brewery %>
+    </h4>
+  </div>
 
-  <p>
-    <strong>Brewery:</strong>
-    <%= @post.brewery %>
-  </p>
+  <div class="row">
+    <div class="col-md-6" id="post-images">
+      <%= image_tag (@post.label) %>
+    </div>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @post.description %>
-  </p>
+    <div class="col-md-6">
+      <div class="details">
+        <p>
+          <strong>Style:</strong>
+          <%= @post.style %>
+        </p>
 
-  <p>
-    <strong>Style:</strong>
-    <%= @post.style %>
-  </p>
+        <p>
+          <strong>Abv:</strong>
+          <%= "#{@post.abv} %"%>
+        </p>
 
-  <p>
-    <strong>Abv:</strong>
-    <%= @post.abv %>
-  </p>
+        <p>
+          <strong>Description:</strong>
+          <%= @post.description %>
+        </p>
+      </div>
+    </div>
+    
+  </div>
 
   
-    <%= image_tag (@post.label) %>
+
+  
+
 
 
   <%= link_to 'Edit', edit_post_path(@post) %> |
