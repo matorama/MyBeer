@@ -1,0 +1,32 @@
+<div class="filter">
+    <%= form_tag posts_path, method: :get do %>
+
+      <div class="row">
+        <div class="col-md-3">
+          <%= label_tag :beer %>
+        </div>
+        <div class="col-md-3">
+          <%= label_tag :brewery %>
+        </div>
+        <div class="col-md-3">
+          <%= label_tag :style %>
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div class="col-md-3">
+          <%= text_field_tag :beer, params[:beer], placeholder: "Name of beer", class: "form-control input-sm" %>
+        </div>
+        <div class="col-md-3">
+          <%= text_field_tag :brewery, params[:brewery], placeholder: "Name of brewery", class: "form-control input-sm"  %>
+        </div>
+        <div class="col-md-3">
+          <%= text_field_tag :style, params[:style], placeholder: "Style of beer", class: "form-control input-sm"  %>
+        </div>
+        <div class="col-md-3">
+          <%= submit_tag "Search", name: nil, class: "btn btn-primary" %>
+        </div>
+      </div> 
+    <% end %>
+  </div>

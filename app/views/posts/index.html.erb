@@ -1,0 +1,47 @@
+<div class="container">
+
+  <%= render 'filter' %>
+  
+
+  <% if @posts.empty? %>
+    <hr>
+    <h3>No results found</h3>
+  <% else %>
+
+    <table class="table table-hover table-condensed">
+      <thead>
+        <tr>
+          <th>Preview</th>
+          <th>Name</th>
+          <th>Brewery</th>
+          <th>Style</th>
+          <th>Abv</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr>
+            <td width="10%" height="120px">
+              <%= link_to post_path(post) do %>
+                <%= image_tag post.label, class: "thumbnail" %>
+              <% end %>
+            </td>
+            <td style="vertical-align:middle"><%= link_to post.name, post %></td>
+            <td style="vertical-align:middle"><%= post.brewery %></td>
+            <td style="vertical-align:middle"><%= post.style %></td>
+            <td style="vertical-align:middle"><%= "#{post.abv} %" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+
+    <br>
+
+    <%= link_to 'New Post', new_post_path %>
+
+  <% end %>
+
+</div>
