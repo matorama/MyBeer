@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aroma: MyText
+  appearance: MyText
+  taste: MyText
+  palate: MyText
+  overall: MyText
+  score: 1
+  post_id: 
+
+two:
+  aroma: MyText
+  appearance: MyText
+  taste: MyText
+  palate: MyText
+  overall: MyText
+  score: 1
+  post_id: 
