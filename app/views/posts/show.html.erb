@@ -46,7 +46,7 @@
             <p><strong>Palate:</strong> <%= review.palate %></p>
             <p><strong>Overall:</strong> <%= review.overall %></p>
             <%= link_to "Delete", post_review_path(@post,review), method: :delete, data: {confirm: "Really delete the review?"}%> 
-            <%= link_to "Edit", edit_post_path(@post, @review) %>
+            <%= link_to "Edit", edit_post_review_path(@post, review) %>
           </div>
         <% end %>
       </div>

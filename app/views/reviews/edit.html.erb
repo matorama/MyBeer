@@ -1,0 +1,41 @@
+<div>
+        <h2>Add a new review!</h2>
+        <%= form_for [@post, @review] do |f| %> 
+           
+            <div>
+                <%= f.label :aroma, class: "form-label" %> 
+                <%= f.text_area :aroma, class: "text-area" %>
+            </div>
+
+            <div>
+                <%= f.label :appearance, class: "form-label" %> 
+                <%= f.text_area :appearance, class: "text-area" %>
+            </div>
+
+            <div>
+                <%= f.label :taste, class: "form-label" %> 
+                <%= f.text_area :taste, class: "text-area" %>
+            </div>
+
+            <div>
+                <%= f.label :palate, class: "form-label" %> 
+                <%= f.text_area :palate, class: "text-area" %>
+            </div>
+
+            <div>
+                <%= f.label :overall, class: "form-label" %> 
+                <%= f.text_area :overall, class: "text-area" %>
+            </div>
+
+             <div>
+                <%= f.label :score, class: "form-label" %> 
+                <%= f.number_field :score, class: "num-input" %>
+            </div>
+       
+
+            <div>
+                <%= f.submit "Add your review!", class: "button" %>
+            </div>
+
+        <% end %>
+  </div>

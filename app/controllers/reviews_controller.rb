@@ -25,4 +25,19 @@ class ReviewsController < ApplicationController
 
    	  redirect_to post_path(@review.post)
   end
+
+
+  def edit
+  	  @post = Post.find(params[:post_id])
+      @review = Review.find(params[:id])
+  end
+
+
+  def update
+		  @review = Review.find(params[:id])
+		  @review.update(params.require(:review).permit(:score, :aroma, :appearance, :taste, :palate, :overall))
+
+		  redirect_to post_path(@review.post)
+	end
+
 end
