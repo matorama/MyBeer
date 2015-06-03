@@ -7,13 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<ul>
-		<li><%= link_to "Sign Up", new_user_registration_path %> </li>
-	</ul>
+	<%= render 'layouts/navbar' %>
 
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
-<%= yield %>
+
+	<div class="container-fluid">
+   		<p class="notice"><%= notice %></p>
+   		<p class="alert"><%= alert %></p>
+		<%= yield %>
+	</div>
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 body {
-	background-color: #FFF5D3;
+	background-color: #fdf8e1;
 }
 
 
@@ -29,7 +29,7 @@ body {
 }
 
 .table-hover tbody tr:hover {
-	background-color: #F3E09C;
+	background-color: #F2cb3b;
 }
 
 tbody {
@@ -70,4 +70,25 @@ tbody {
 	padding: 0px;
   	margin-bottom: 0px; 
   	border: 0px solid transparent;
+}
+
+
+#nav {
+	padding: 0px 300px;
+}
+
+.home {
+	background-image: url(http://frederickbeer.com/wp-content/uploads/2014/05/beer-wallpaper.jpg);
+	height: 1024px;
+	margin: -120px;
+	padding: 0px;
+	background-position: center;
+	background-size: cover;
+
+}
+
+ #hometitle {
+ 	position: relative;
+ 	top: 150px;
+	margin-top: 50px;
 }

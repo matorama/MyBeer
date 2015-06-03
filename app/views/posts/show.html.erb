@@ -37,6 +37,7 @@
 
       <div class="review">
         <h3>Review</h3>
+        <%= link_to "Add Review", new_post_review_path(@post, @review) %>
         <% @post.reviews.each do |review| %>
           <div class="review-details">
             <p><strong>Score:</strong> <%= review.score %></p>

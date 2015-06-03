@@ -15,6 +15,13 @@ class ReviewsController < ApplicationController
 
   end
 
+
+  def new
+  	@post = Post.find(params[:post_id])
+  	@review = Review.new
+
+  end
+
   def destroy
 
       @post = Post.find(params[:post_id])
