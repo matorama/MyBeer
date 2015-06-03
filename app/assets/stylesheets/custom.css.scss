@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 body {
-	background-color: #fdf8e1;
+	background-color: #FFF5C5;
 }
 
 
@@ -22,14 +22,16 @@ body {
 }
 
 .filter {
-	background-color: rgba(215,226,241,0.9);
+	background-color: rgba(154, 82, 15, 1);
 	padding: 20px 30px 10px 30px;
+	border: solid #251300 2px;
 	border-radius: 10px;
-	margin-top: 30px;
+	margin-top: 43px;
+	color: white;
 }
 
 .table-hover tbody tr:hover {
-	background-color: #F2cb3b;
+	background-color: #FFE791;
 }
 
 tbody {
@@ -41,7 +43,7 @@ tbody {
 }
 
 .details {
-	background-color: #F3E09C;
+	background-color: #FFE791;
 	border: 2px solid brown;
 	border-radius: 5px;
 	padding: 20px;
@@ -49,7 +51,7 @@ tbody {
 }
 
 .review {
-	background-color: #F3E09C;
+	background-color: #FFE791;
 	border: 2px solid brown;
 	border-radius: 5px;
 	padding: 20px;
@@ -74,13 +76,19 @@ tbody {
 
 
 #nav {
-	padding: 0px 300px;
+	padding: 0px 193px;
+	margin: 0px;
+	background-color: #251300;
+	a{
+	color: white;
+	font-family: 'Special Elite', cursive;
+	}
 }
 
 .home {
 	background-image: url(http://frederickbeer.com/wp-content/uploads/2014/05/beer-wallpaper.jpg);
 	height: 1024px;
-	margin: -120px;
+	margin: -150px;
 	padding: 0px;
 	background-position: center;
 	background-size: cover;
@@ -89,6 +97,37 @@ tbody {
 
  #hometitle {
  	position: relative;
- 	top: 150px;
+ 	top: 123px;
 	margin-top: 50px;
+}
+
+
+td > a {
+	color: #803E00;
+}
+
+.link {
+	color: brown;
+}
+.title {
+	font-family: 'Special Elite', cursive;
+	font-size: 80px;
+	margin-bottom: -20px
+}
+
+.subtitle {
+	font-family: 'Special Elite', cursive;
+	font-size: 42px;
+}
+
+a.navbar-brand {
+	font-family: 'Special Elite', cursive;
+}
+
+label {
+	font-family: 'Special Elite', cursive;
+}
+
+a {
+	/*font-family: 'Special Elite', cursive;*/
 }

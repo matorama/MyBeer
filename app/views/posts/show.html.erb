@@ -36,8 +36,8 @@
 
 
       <div class="review">
-        <h3>Review</h3>
-        <%= link_to "Add Review", new_post_review_path(@post, @review) %>
+        <h4>Review</h4>
+        <%= link_to "Add Review", new_post_review_path(@post, @review), class: "link" %>
         <% @post.reviews.each do |review| %>
           <div class="review-details">
             <p><strong>Score:</strong> <%= review.score %></p>
@@ -46,8 +46,8 @@
             <p><strong>Taste:</strong> <%= review.taste %></p>
             <p><strong>Palate:</strong> <%= review.palate %></p>
             <p><strong>Overall:</strong> <%= review.overall %></p>
-            <%= link_to "Delete", post_review_path(@post,review), method: :delete, data: {confirm: "Really delete the review?"}%> 
-            <%= link_to "Edit", edit_post_review_path(@post, review) %>
+            <%= link_to "Delete |", post_review_path(@post,review), method: :delete, data: {confirm: "Really delete the review?"}, class: "link"%> 
+            <%= link_to " Edit", edit_post_review_path(@post, review), class: "link" %>
           </div>
         <% end %>
       </div>
@@ -57,60 +57,5 @@
 
   
 
-
-  <div>
-        <h2>Add a new review!</h2>
-        <%= form_for [@post, @review] do |f| %> 
-           
-            <div>
-                <%= f.label :aroma, class: "form-label" %> 
-                <%= f.text_area :aroma, class: "text-area" %>
-            </div>
-
-            <div>
-                <%= f.label :appearance, class: "form-label" %> 
-                <%= f.text_area :appearance, class: "text-area" %>
-            </div>
-
-            <div>
-                <%= f.label :taste, class: "form-label" %> 
-                <%= f.text_area :taste, class: "text-area" %>
-            </div>
-
-            <div>
-                <%= f.label :palate, class: "form-label" %> 
-                <%= f.text_area :palate, class: "text-area" %>
-            </div>
-
-            <div>
-                <%= f.label :overall, class: "form-label" %> 
-                <%= f.text_area :overall, class: "text-area" %>
-            </div>
-
-             <div>
-                <%= f.label :score, class: "form-label" %> 
-                <%= f.number_field :score, class: "num-input" %>
-            </div>
-       
-
-            <div>
-                <%= f.submit "Add your review!", class: "button" %>
-            </div>
-
-        <% end %>
-  </div>
-
- 
-
-  
-
-  
-
-
-
-
-
-
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-  <%= link_to 'Back', posts_path %>
+  <%= link_to 'Back', posts_path, class: "link" %>
 </div>

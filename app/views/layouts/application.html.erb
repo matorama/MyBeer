@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BreweryScraper</title>
+  <title>MyBeer</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Rajdhani|Special+Elite' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<%= render 'layouts/navbar' %>
 
 
-	<div class="container-fluid">
+	<div class="container">
    		<p class="notice"><%= notice %></p>
    		<p class="alert"><%= alert %></p>
 		<%= yield %>
