@@ -8,7 +8,7 @@ namespace :scraper do
   	key = "d2eddea7b59ad8f6e9e62ff6c677bce6"
   	endpoint = "http://api.brewerydb.com/v2/beers"
 
-    page = 4
+    page = 84
     while page < 153 do
 
     	# Specify request parameters
