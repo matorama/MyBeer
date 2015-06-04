@@ -1,5 +1,5 @@
 <div class="container-fluid">
-        <h2>Add a new review!</h2>
+        
         <%= form_for [@post, @review] do |f| %> 
            
             <div class="form-group">
@@ -29,7 +29,7 @@
 
              <div class="form-group">
                 <%= f.label :score, class: "form-label" %> 
-                <%= f.number_field :score, class: "num-input" %>
+                <%= f.number_field :score, class: "num-input", class: "form-inline" %>
             </div>
        
 
