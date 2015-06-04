@@ -12,7 +12,7 @@ namespace :scraper do
 	params = {
 	  withBreweries: "Y",	
 	  availableId: 1,
-	  p: 151,
+	  p: 4,
 	  key: key
 	  
 	  
